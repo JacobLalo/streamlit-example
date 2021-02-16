@@ -14,6 +14,13 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
+left_column, right_column = st.beta_columns(2)
+pressed = left_column.button('Press me?')
+if pressed:
+    right_column.write("Woohoo!")
+
+expander = st.beta_expander("FAQ")
+expander.write("Here you could put in some really, really long explanations...")
 
 
 with st.echo(code_location='below'):
